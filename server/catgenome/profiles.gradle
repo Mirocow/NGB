@@ -1,7 +1,7 @@
 import org.apache.tools.ant.filters.ReplaceTokens
 
 // copies properties file and filers resources based on environment
-task copyConfiguration {
+task copyConfiguration(type:Copy) {
     doLast {
         println "Target profile: $profile"
         println "Target database: $database"
